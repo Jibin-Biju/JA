@@ -1,0 +1,103 @@
+.withdrawcard {
+  border: 1px solid rgb(230, 230, 230);
+  background: var(--logo-color) !important;
+  background: white;
+  color: var(--txt-clr-darker);
+  .title {
+    color: var(--txt-clr-darker);
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .paragraph {
+    color: var(--txt-clr-lighter);
+    font-weight: 400;
+    font-size: 12.5px;
+  }
+  .shadow {
+    margin-bottom: 0 !important;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.3rem 0;
+  }
+  .ulcol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--txt-clr-lighter);
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 17px;
+      letter-spacing: 0.5px;
+    }
+    .icons {
+      @include flexcenter();
+      border-radius: 5px;
+      padding: 0.1rem 0.2rem;
+      font-size: 13px;
+      color: var(--txt-clr-darker);
+
+      &.green {
+        color: rgba(41, 171, 145, 1);
+      }
+      &.purple {
+        color: rgba(83, 41, 171, 1);
+      }
+    }
+    img {
+      padding-left: 2.2px;
+    }
+    h5.ant-typography {
+      color: var(--txt-clr-orange);
+      background: var(txt-clr-orange-lighter);
+      width: max-content;
+      margin-left: auto;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-weight: 500;
+      right: 20px;
+      overflow: visible;
+    }
+  }
+  .buttoncol {
+    .ant-btn {
+      width: 100%;
+      font-weight: bolder;
+      font-size: 19px;
+      font-weight: 500;
+      height: unset;
+      padding-block: 8.5px;
+      border-radius: 35px;
+      max-width: 200px;
+      margin: auto;
+
+      color: var(--txt-clr-lighter);
+      background: transparent;
+      border: unset;
+      box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+        -1px -1px 2px rgba(184, 184, 184, 0.5),
+        inset -4px 4px 8px rgba(184, 184, 184, 0.2),
+        inset 4px -4px 8px rgba(184, 184, 184, 0.2),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+        inset 4px 4px 10px rgba(184, 184, 184, 0.9);
+
+      @include transition();
+      @include flexcenter();
+      &:hover {
+        transition: background 0.2s ease-out;
+        background: var(--bg-orange);
+        color: white;
+        box-shadow: unset;
+      }
+      gap: 2rem;
+      & > .CasionDashboardIcons {
+        order: 2;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

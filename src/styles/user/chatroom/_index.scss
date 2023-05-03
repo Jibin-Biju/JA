@@ -1,0 +1,422 @@
+$color_1: black;
+$color_2: #525252b6;
+$color_3: grey;
+$color_4: var(--blue);
+$background-color_1: white;
+$background-color_2: #e9e9e9;
+$background-color_3: transparent;
+
+/* LeftBar */
+/* messages */
+/* messages end */
+/* Main */
+.ChatRoom {
+  height: calc(100vh - 100px);
+  width: 100%;
+  > div {
+    height: 100%;
+  }
+}
+
+.ChatRoomLeftBar.flex {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 6px;
+}
+.flex1 {
+  flex: 1;
+}
+.flex9 {
+  flex: 9;
+  overflow-y: scroll;
+}
+.ChatRoomLeftBar {
+  height: 100%;
+  position: relative;
+  scrollbar-width: thin;
+  background-color: $background-color_1;
+}
+.ChatList {
+  width: 100%;
+  padding: 0px 20px;
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+.SearchForm {
+  width: 100%;
+  padding: 0px 20px;
+  padding: 0 10px;
+  z-index: 1;
+}
+.ChatSearchBar {
+  background-color: $background-color_2;
+  color: $color_1;
+  border-radius: 40px;
+  input {
+    background-color: $background-color_2;
+    color: $color_1;
+    padding: 0.3rem 1rem !important;
+  }
+  .ant-select-selector {
+    background: #e9e9e9 !important;
+    border-radius: 40px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    height: 50px !important;
+  }
+  .ant-select-selection-placeholder {
+    font-weight: 500;
+    color: $color_2;
+    display: flex;
+    align-items: center;
+  }
+  .ant-select-arrow {
+    font-size: large;
+    height: 17px;
+    font-weight: 900;
+    padding-right: 5px;
+  }
+  .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+    > span {
+      margin-bottom: 0px !important;
+    }
+  }
+  .ant-select-clear {
+    background-color: $background-color_3;
+    font-size: 0.85rem;
+  }
+}
+.ChatSearchBarDropDown {
+  .ant-select-item.ant-select-item-option {
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+}
+.chatItem {
+  padding: 14px 15px;
+  width: 99%;
+  border-radius: 16px;
+  cursor: pointer;
+  margin: auto;
+}
+.MessageReciver {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  max-width: 85%;
+  margin-left: auto;
+
+  + {
+    .MessageReciver {
+      margin-top: 20px;
+    }
+  }
+}
+.MessageSender {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  max-width: 85%;
+}
+.MessageSenderTextWrapper {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.MessagSenderText {
+  background: #0094ff33;
+  padding: 10px 12px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-bottom: 0px;
+}
+.MessageReciverText {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 12px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  margin-bottom: 5px;
+}
+.TeamSelect {
+  .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+    > span {
+      margin-bottom: 0px !important;
+    }
+  }
+}
+.chatItem.activeChat {
+  background: rgba(0, 148, 255, 0.2);
+}
+.dateAndtime {
+  color: $color_3;
+  font-weight: 300;
+  font-size: small;
+  font-size: 11px;
+}
+.imageAndName {
+  .ant-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  width: 90% !important;
+  display: flex;
+  align-items: center;
+}
+.ChatRoomMain {
+  position: relative;
+  height: 100%;
+  padding-top: 0.5rem;
+  background-color: $background-color_1;
+}
+.Chat_TobBar {
+  width: 100%;
+  background-color: $background-color_1;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0px 40px 0px 20px;
+  height: 60px;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    margin-bottom: 0;
+  }
+}
+.ChatContent {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  padding-right: 15%;
+  background-color: $background-color_1;
+  padding: 45px 15% 10px 20px;
+  overflow-y: scroll;
+  min-height: 300px;
+  scrollbar-width: thin;
+  + {
+    .ChatFooter {
+      svg {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+}
+.ChatFooter {
+  padding-right: 15%;
+  background-color: $background-color_1;
+  .MainForm {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.mobilemodal {
+  .Chat_TobBar {
+    position: unset !important;
+    height: 70px;
+  }
+  .ChatContent {
+    margin-top: unset !important;
+    padding-bottom: unset !important;
+  }
+}
+.chatRoomMainModal {
+  .ChatFooter {
+    position: unset !important;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: white;
+    z-index: 2;
+    bottom: 0;
+    top: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #d1d1d1;
+    margin-top: 0px !important;
+  }
+  width: 100%;
+  .ant-modal {
+    width: 100% !important;
+    top: 0;
+    margin: 0;
+    padding: 0 !important;
+    max-width: unset !important;
+  }
+  .ant-modal-content {
+    border-radius: unset;
+  }
+  .Chat_TobBar {
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: white;
+    z-index: 2;
+  }
+  .ChatRoomMain {
+    padding: 0;
+  }
+  .ChatContent {
+    padding: 0;
+    margin-top: 55px;
+    padding-bottom: 45px;
+  }
+}
+.ChatContentMobile {
+  height: calc(100vh - 135px);
+  min-height: unset;
+  padding-block: 10px 20px !important;
+  + {
+    .ChatFooter {
+      .ant-form-item {
+        margin-bottom: 0;
+        padding: unset;
+      }
+      .ChatSearchBar {
+        padding-block: 2px !important;
+      }
+    }
+  }
+}
+.ant-modal-body {
+  &:has(.ChatContentMobile) {
+    padding-inline: 8px;
+  }
+  .ChatContentMobile {
+    padding-inline: 8px !important;
+  }
+}
+.EmptyMessageCenter {
+  text-align: center;
+}
+.MainForm {
+  svg {
+    color: $color_4 !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ChatRoomLeftBar {
+    .chatItem {
+      flex-direction: column;
+      gap: 0;
+      padding-block: 5px;
+      border-radius: 0;
+    }
+    .imageAndName {
+      width: 100% !important;
+    }
+    .dateAndtime {
+      align-self: flex-end;
+      position: relative;
+    }
+    .ant-list-split {
+      .ant-list-item {
+        &:last-child {
+          border-bottom: 1px solid #f0f0f0;
+        }
+      }
+    }
+  }
+  .ChatRoom {
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ChatRoomLeftBar.flex {
+    padding-top: 1.5rem;
+  }
+  .ChatRoom {
+    .imageAndName {
+      .ant-list-item-meta-title {
+        margin-bottom: 0;
+      }
+      h5 {
+        font-weight: 500;
+        font-size: 13.5px;
+      }
+    }
+    .dateAndtime {
+      font-size: 11px;
+      margin-left: 5px;
+    }
+    .ant {
+      .ChatRoomLeftBar.flex {
+        .ant-form-item {
+          margin-bottom: 0px !important;
+        }
+      }
+    }
+  }
+  .ChatSearchBar {
+    .ant-select-selector {
+      height: 45px !important;
+    }
+    .ant-select-selection-placeholder {
+      font-size: 12px;
+    }
+  }
+  .ChatList {
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .SearchForm {
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .MessagSenderText {
+    padding: 6px 12px;
+  }
+  .MessageReciverText {
+    padding: 6px 12px;
+  }
+  .MessageReciver {
+    .time {
+      font-size: 11px;
+    }
+  }
+  .MessageSender {
+    .time {
+      font-size: 11px;
+    }
+    .ant-avatar {
+      min-width: 35px !important;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .Chat_TobBar {
+    h3.ant-typography {
+      font-size: 20px;
+    }
+  }
+  .ChatContentMobile {
+    + {
+      .ChatFooter {
+        .MainForm {
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

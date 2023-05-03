@@ -1,0 +1,114 @@
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@mixin animate-fadein($duration: 0.15s, $delay: 0s) {
+  animation: fade-in $duration ease $delay forwards;
+}
+@mixin min-height() {
+  min-height: 70px;
+  // height: 85px;
+  // background-color: red;
+  @include mobile-large() {
+    min-height: 75px;
+  }
+}
+@mixin bolder-txt() {
+  font-weight: 700;
+}
+@mixin flexcenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin scrollbar {
+  --bg: rgb(240, 240, 240);
+  --thumb: #888;
+  --border: rgb(237, 237, 237);
+  /* WebKit (Chrome and Safari) */
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumb);
+    border-radius: 4px;
+  }
+
+  /* Firefox */
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumb) var(--bg);
+  }
+
+  &::-moz-scrollbar-thumb {
+    background-color: var(--thumb);
+    border-radius: 4px;
+  }
+}
+
+@mixin no-scrollbar {
+  /* Hide scrollbar for WebKit (Chrome and Safari) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+}
+
+@mixin tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile-large {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 320px) {
+    @content;
+  }
+}

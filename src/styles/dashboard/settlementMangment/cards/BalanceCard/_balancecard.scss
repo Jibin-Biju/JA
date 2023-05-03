@@ -1,0 +1,78 @@
+.balancecard {
+  background: var(--bg-orange);
+  color: white;
+
+  .balancecol {
+    margin-bottom: 0.5rem;
+    .ant-typography {
+      h1 {
+        color: white;
+        font-size: 2rem !important;
+        font-weight: bold;
+        margin-top: -6px;
+      }
+      h5 {
+        color: white;
+        opacity: 0.78;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: right;
+      }
+    }
+  }
+  .ulcol {
+    .flex {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      color: white;
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: 0.5px;
+    }
+    .icons {
+      @include flexcenter();
+      border-radius: 5px;
+      padding: 0.1rem 0.2rem;
+      font-size: 17px;
+      background-color: white;
+      &.up {
+        color: green;
+      }
+      &.down {
+        color: red;
+      }
+    }
+    h5.ant-typography {
+      color: white;
+      text-align: right;
+    }
+  }
+  .buttoncol {
+    .ant-btn {
+      width: 100%;
+      background-color: white;
+      color: var(--txt-clr-orange);
+      font-weight: bolder;
+      font-size: 19px;
+      font-weight: 500;
+      height: unset;
+      padding-block: 8.5px;
+      border-radius: 10px;
+      @include flexcenter();
+      gap: 2rem;
+      & > .CasionDashboardIcons {
+        order: 2;
+        font-size: 1.5rem;
+      }
+      @include mobile-large() {
+        gap: 0.5rem;
+
+        font-size: 1.1rem;
+        & > .CasionDashboardIcons {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

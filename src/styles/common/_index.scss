@@ -1,0 +1,58 @@
+@import "./error/error";
+@import "./logo/logo";
+@import "./scrollbars/scollbar";
+
+@import "./mixins/mixins.scss";
+@import "./Logo/logo.scss";
+@import "./Icons/icons.scss";
+@import "./Loader/loader";
+@import "./TableWrapper/TableWrapper.scss";
+@import "./Errors/errors.scss";
+@import "./Buttons/buttons.scss";
+@import "./Forum/index.scss";
+@import "./Editor/index.scss";
+
+body {
+  min-height: 100vh;
+  max-width: 2000px;
+  margin: auto;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+.m0,
+h5.ant-typography.m0,
+h4.ant-typography.m0,
+h3.ant-typography.m0,
+h2.ant-typography.m0,
+h1.ant-typography.m0,
+.ant-typography.m0 {
+  margin: 0px;
+}
+
+#root > .content {
+  padding-inline: 3rem;
+  padding-block: 50px !important;
+}
+
+.px {
+  padding-inline: 3rem;
+}
+.swal2-container {
+  z-index: 10;
+}
+
+@media screen and (max-width: 500px) {
+  .px {
+    padding-inline: 1rem;
+  }
+  #root > .content {
+    padding-inline: 1rem;
+    padding-block: 50px !important;
+  }
+}
+
+* {
+  font-family: var(--font-family);
+}

@@ -1,0 +1,36 @@
+.adminlayout {
+  background: var(--bg-app);
+  color: var(--txt-clr-lighter);
+  font-size: 1rem;
+
+  .ant-layout-header {
+    background-color: unset;
+    height: unset;
+    padding: unset;
+    line-height: unset;
+  }
+  .ant-layout-sider {
+    background-color: unset;
+    min-height: 100vh;
+    .ant-menu-light {
+      background-color: transparent;
+    }
+  }
+  .ant-layout-sider-trigger {
+    background-color: unset;
+  }
+}
+
+.adminlayout .ant-dropdown-menu-title-content {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

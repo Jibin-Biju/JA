@@ -1,0 +1,132 @@
+.tablerow {
+  background-color: white;
+  border-radius: var(--radius);
+
+  padding: 20px;
+  & + & {
+    margin-top: 20px;
+  }
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+  .searchbarcol {
+    form {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .ant-form-item:first-of-type {
+        width: calc(100% - 86px);
+        .Icon {
+          color: var(--nav-icon-clr);
+          opacity: 0.6;
+        }
+        input {
+          height: 30px;
+        }
+      }
+      .ant-form-item:last-of-type {
+        margin: 0;
+      }
+
+      .btn {
+        background: var(--table-header);
+        height: 38px;
+        width: 70px;
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+      }
+      @include mobile-large() {
+        .btn {
+          @include flexcenter();
+          height: 35px;
+        }
+        .ant-form-item:first-of-type {
+          input {
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+
+  .searchheading {
+    color: var(--txt-clr-darker);
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+  }
+  .tablecol {
+    tr > td:first-of-type {
+      padding-left: 16px;
+    }
+    tr > td:last-of-type {
+      padding-right: 16px;
+    }
+    tr > th {
+      background: var(--table-header);
+      color: var(--table-side-tab-clr);
+      padding-block: 10px;
+      font-weight: 400;
+      font-size: 15px;
+      &::before {
+        display: none;
+      }
+    }
+    tr > th:last-of-type {
+      background: var(--table-side-active-bg);
+      color: var(--table-side-tab-clr);
+      border-radius: 0 6px 6px 0 !important;
+    }
+    tr > th:first-of-type {
+      border-radius: 6px 0 0 6px !important;
+    }
+
+    tr > td {
+      border: unset;
+      text-align: left;
+    }
+    tr > td:first-of-type {
+      text-align: left;
+    }
+
+    .nameavatar {
+      min-width: 160px;
+      gap: 0.4rem;
+      .name {
+        color: rgba(163, 166, 172, 1);
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+    }
+    .amount {
+      color: var(--txt-clr-orange);
+    }
+    .date {
+      color: var(txt-clr-darker);
+      color: rgba(40, 0, 112, 1);
+    }
+  }
+  @include mobile-large() {
+    .date,
+    .amount,
+    .name,
+    td {
+      font-size: 13.5px;
+    }
+    tr > th {
+      font-size: 14.5px !important;
+    }
+    row-gap: 15px !important;
+    .searchheading {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ant-table-content {
+  @include scrollbar();
+  tbody {
+    @include tablet() {
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.sideitems {
+  @include flexcenter();
+  gap: 1.4rem;
+
+  p {
+    width: 100%;
+    font-size: 0.9rem;
+    margin: 0px;
+    font-weight: 500;
+  }
+
+  svg {
+    font-size: 24px;
+  }
+  &:hover {
+    z-index: 2;
+    color: var(--red);
+  }
+  &.active {
+    color: var(--red);
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .spa {
+    display: none;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .sideitems {
+    gap: 0.8rem;
+    svg {
+        font-size: larger;
+      }
+    p {
+      display: none;
+    }
+  }
+}

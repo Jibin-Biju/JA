@@ -1,0 +1,40 @@
+.ErrorPage,
+.pageNotFound {
+  @include flexcenter();
+  flex-direction: column;
+
+  width: MIN(90%, 600px);
+  box-shadow: var(--shadow1);
+  background: white;
+  margin: 100px auto;
+  border-radius: 12px;
+  padding: 20px;
+  h1 {
+    font-size: 1.5rem;
+    color: white;
+  }
+  .btn {
+    // color: rgb(34, 34, 34);
+    color: white;
+    background-color: var(--primary) !important;
+    border: none;
+    font-weight: 600;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.content {
+  min-height: 65vh;
+}
+.adminlayout {
+  .ErrorPage {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    & .btn {
+      background: var(--bg-side) !important;
+    }
+  }
+}

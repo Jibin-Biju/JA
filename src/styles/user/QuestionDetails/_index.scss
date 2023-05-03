@@ -1,0 +1,152 @@
+.QuestionDetailsSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  .right {
+    flex: 1;
+    border-radius: 2px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    h3 {
+      color: var(--primary);
+      cursor: pointer;
+      font-weight: 800 !important;
+      &:hover {
+        color: var(--red);
+      }
+    }
+    p {
+      font-size: 1rem;
+      line-height: 25px;
+      color: rgb(90, 90, 90);
+    }
+    hr {
+      background-color: var(--dark_grey) !important;
+      height: 1px;
+    }
+  }
+  .left {
+    flex: 0.1;
+    background-color: var(--bg_grey);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    user-select: all;
+
+    svg {
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+
+  .meta {
+    align-self: stretch;
+    font-weight: 200;
+    height: 132px;
+    justify-content: center;
+    span {
+      font-size: 14px;
+      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  .user {
+    font-weight: bolder;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.QuestionDetailsRL {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.88rem;
+    color: grey;
+  }
+}
+
+.icondiv {
+  padding: 0.4rem 0.6rem;
+  /* background-color: var(--bg_grey); */
+  /* background-color: var(--dark_grey); */
+  border-radius: 0.5rem;
+  user-select: none;
+}
+.icondiv2 {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  background: var(--lightGrey);
+  user-select: none;
+}
+.icondiv:not(.mleft):hover {
+  color: white;
+  background: var(--red);
+  cursor: pointer;
+}
+.mleft {
+  margin-left: auto;
+  cursor: none;
+  cursor: default;
+}
+
+.tags {
+  display: flex;
+  gap: 1rem;
+  color: grey;
+  .icondiv {
+    color: white;
+    background-color: var(--red);
+    font-size: 0.8rem;
+  }
+}
+
+.Comments {
+  width: 100%;
+  margin-left: auto;
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 700px) {
+  .QuestionDetailsRL {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .tags {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .mnone {
+    display: none;
+  }
+  .right p {
+    line-height: 21px;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 400px) {
+  .QuestionDetailsSection {
+    gap: 0.5rem;
+  }
+}

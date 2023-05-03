@@ -1,0 +1,38 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --shadow1: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12);
+  --shadow2: 0px 0px 12px 5px rgba(246, 246, 253, 0.9);
+  --shadow3: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.04);
+  --primary: rgba(33, 42, 51, 0.93);
+  --secondary: #929db1;
+  --red: #ca2b2b;
+  --bg_grey: rgb(245, 245, 245);
+  --dark_grey: #e4e4e4;
+  --white: rgb(254, 254, 254);
+  --lightGrey: #e2e8f0;
+  --blueBorder: #0077b5;
+
+  // dashboards
+  --bg-app: linear-gradient(
+    179.83deg,
+    #ffffff -14.97%,
+    #e9effb 73.93%,
+    #eaeefa 73.93%
+  );
+  --bg-side: linear-gradient(142.67deg, #5263a1 22.4%, #384984 87.54%);
+  --navMobile: linear-gradient(142.67deg, #5263a1 22.4%, #384984 87.54%);
+  --bg-orange: linear-gradient(180deg, #fe9076 0%, #f26646 100%);
+  --side-active-tab-bg: #f6f9fd;
+  --side-active-tab-clr: #4b5c99;
+  --side-clr-default: #a0a9cb;
+  --table-header: #405089;
+  --table-side-active-bg: #15214d;
+  --table-side-tab-clr: #ffffff;
+  --nav-icon-clr: #3a3c58;
+  --nav-bg: #eff4fc;
+  --txt-clr-darker: #262d57;
+  --txt-clr-lighter: #3a3541de;
+  --txt-clr-orange: #ff7555;
+  --txt-clr-orange-lighter: #fff0ed;
+  --logo-color: white;
+}

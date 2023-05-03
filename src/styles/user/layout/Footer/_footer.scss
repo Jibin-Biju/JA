@@ -1,0 +1,86 @@
+.Footer {
+  background-color: var(--primary);
+  min-height: 250px;
+  width: 100%;
+  color: white;
+  margin-top: 100px !important;
+}
+.innerFooter {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items: top;
+}
+.innerFooter .col {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.col {
+  flex: 0.4 !important;
+}
+.col:first-of-type {
+  flex: 1 !important;
+}
+
+.head {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0;
+}
+.data p {
+  margin-top: -0.6rem;
+}
+.data p,
+.data a {
+  line-height: 25px;
+  text-align: left;
+  font-size: 0.9rem !important;
+}
+
+.data a:hover {
+  color: var(--red);
+}
+
+.icon svg {
+  font-size: 1.5rem !important;
+}
+
+.footerIcon {
+  color: var(--red);
+  &:hover {
+    color: var(--red);
+  }
+}
+@media screen and (max-width: 786px) {
+  .innerFooter {
+    flex-direction: column;
+  }
+  .Icons {
+    gap: 1.5rem !important;
+  }
+  .innerFooter .icon,
+  .data > div > span > span {
+    background-color: var(--dark_grey);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+  }
+  .innerFooter svg {
+    font-size: 1.3rem !important;
+  }
+  .head a > span > svg {
+    display: block;
+  }
+}

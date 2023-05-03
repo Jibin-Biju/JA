@@ -1,0 +1,26 @@
+.ql-container {
+  min-height: 190px;
+  transition: all 0.2s;
+  padding-block: 0.5rem;
+}
+
+.ql-snow .ql-editor code,
+.chakra-text code {
+  font-size: 85%;
+  padding: 2px 4px;
+}
+
+.ql-snow .ql-editor code,
+.ql-snow .ql-editor pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.chakra-text p:has(code) {
+  background-color: #f0f0f0;
+  border-radius: 2px;
+}
+
+.chakra-text p > code {
+  font-size: 77% !important;
+  padding: 0px 4px;
+}

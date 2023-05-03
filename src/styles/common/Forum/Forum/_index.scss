@@ -1,0 +1,40 @@
+.Forum {
+  width: 100%;
+  margin: auto;
+}
+.innerFeed {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start !important;
+  gap: 2rem;
+  position: relative;
+}
+.innerFeed > div:first-of-type,
+.innerFeed > div:nth-of-type(3) {
+  position: sticky;
+  top: 80px !important;
+  width: 24%;
+  top: 0;
+}
+
+.innerFeed > div::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 995px) {
+  .innerFeed > div {
+    width: 100%;
+  }
+  .innerFeed > div:first-of-type,
+  .innerFeed > div:nth-of-type(3) {
+    position: unset;
+    width: 100%;
+  }
+
+  .innerFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

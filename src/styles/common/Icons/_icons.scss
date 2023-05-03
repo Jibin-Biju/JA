@@ -1,0 +1,23 @@
+.CasionDashboardIcons {
+  @include flexcenter();
+  justify-content: unset;
+  position: relative;
+  width: max-content;
+}
+
+.CasionDashboardIcons {
+  .groupicon {
+    font-size: 1.5rem;
+    @include flexcenter();
+    .first {
+      position: relative;
+      @include flexcenter();
+      .second {
+        font-size: 1.2rem;
+        position: absolute;
+        left: -50%;
+        top: -2px;
+      }
+    }
+  }
+}

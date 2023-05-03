@@ -1,0 +1,107 @@
+.adminlayout {
+  max-height: 100vh;
+  & > .ant-layout-sider {
+    min-width: unset !important;
+    width: unset !important;
+    flex: unset !important;
+    max-width: 100% !important;
+  }
+
+  .ant-layout-sider {
+    .sidebar {
+      ul.ant-menu.ant-menu-root {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: unset;
+        max-width: 100%;
+        overflow-x: hidden;
+        &:focus {
+          border: unset;
+          box-shadow: unset;
+        }
+      }
+      .logoWrapperSide,
+      .logo {
+        @include animate-fadein();
+      }
+
+      @include side-tab();
+      background: var(--bg-side);
+
+      &.smallsidebar {
+        position: fixed;
+        top: 0;
+      }
+      &.opened {
+        left: 0;
+        z-index: 2;
+      }
+      &.closed {
+        left: -130%;
+      }
+    }
+
+    .ant-layout-sider-trigger {
+      display: none;
+    }
+  }
+}
+.adminlayout {
+  .sidebarfixedwrappersider {
+    position: absolute;
+    z-index: 12;
+    overflow: hidden;
+    width: 100svw;
+    height: 100%;
+    .ant-layout-sider-children {
+      .sidebarfixed {
+        width: 100svw !important;
+        max-width: unset !important;
+        @include scrollbar();
+        height: 100vh;
+        overflow-y: scroll;
+      }
+    }
+  }
+  .sidebar {
+    @include no-scrollbar();
+    // @include scrollbar();
+    max-height: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px !important;
+  }
+}
+.userButtonSide {
+  @include animate-fadein(0.2, 0.2);
+  height: max-content;
+  background: var(--bg-orange);
+  position: relative;
+  left: 12px;
+  // margin-top: auto !important;
+  margin-bottom: 20px;
+  width: max-content;
+  border-radius: 12px;
+  padding-block: 0.6rem;
+  border: unset;
+  transition: all 0.3s ease-in-out;
+  .ant-row {
+    gap: 0.7rem;
+    text-align: left;
+    h5,
+    span {
+      margin-bottom: 0;
+      color: white;
+      font-size: 14px;
+    }
+  }
+  &.avatar {
+    animation: unset;
+    @include flexcenter();
+    position: static;
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,82 @@
+.QuestionPage {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 2em;
+  background-color: var(--white);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.QuestionPage h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.QuestionPage h3 {
+  margin: 0.3em 0 0.2em 0;
+  color: var(--red);
+}
+.QuestionPage p {
+  font-size: 0.85em;
+}
+.QuestionPage .input_title {
+  margin-top: 0.6em;
+}
+.QuestionPage .Editor_container {
+  margin-top: 1.2em;
+  width: 100%;
+}
+.QuestionPage .Editor_container form {
+  display: block;
+  margin: 0.2em 0;
+  padding: 0;
+}
+.QuestionPage .Editor_container form input[type="button"] {
+  padding: 0.8em 2em;
+  margin-top: 0.2em;
+}
+.QuestionPage input[type="text"] {
+  color: var(--primary) !important;
+  padding: 0.8em 2em;
+  border-radius: 0.5em;
+  border: 2px solid var(--dark_grey);
+  width: 100% !important;
+  margin: 0.2em 0;
+}
+.QuestionPage input[type="text"]:focus {
+  outline: none;
+}
+.QuestionPage > .btn {
+  display: block;
+  width: max-content;
+  position: relative;
+  margin: 2em auto 0 auto !important;
+  text-align: center;
+  padding: 0.8rem 3.5rem;
+  background-color: var(--red);
+  color: white;
+  &:hover {
+    background-color: var(--red);
+  }
+}
+.QuestionPage .QuestionPage_tag > *:nth-child(3) {
+  margin-top: 1em;
+}
+.ReactQuill {
+  margin-bottom: 1em;
+}
+.ql-editor {
+  height: 200px;
+}
+@media (max-width: 786px) {
+  .QuestionPage {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .QuestionPage {
+    width: 95%;
+  }
+  .QuestionPage h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+}

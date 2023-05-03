@@ -1,0 +1,10 @@
+@import "./layout/layout.scss";
+@import "./settlementMangment/settlementMangment.scss";
+
+.adminlayout .logo {
+  font-size: 1.3rem !important;
+  text-align: center !important;
+  margin: 25px auto 10px auto;
+  color: var(--logo-color);
+  display: block;
+}

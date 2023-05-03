@@ -1,0 +1,111 @@
+.adminNav {
+  @include min-height();
+  @include flexcenter();
+  max-width: 100%;
+  justify-content: space-between;
+  padding-inline: 3%;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.02);
+
+  & > .ant-col {
+    height: 50px !important;
+  }
+
+  .navsearchbar {
+    height: 100% !important;
+
+    .ant-input-wrapper {
+      height: 100%;
+    }
+    .ant-input-affix-wrapper,
+    .ant-btn,
+    input {
+      background: var(--nav-bg);
+      border: unset;
+      height: 50px;
+    }
+    input:focus,
+    .ant-input-affix-wrapper {
+      box-shadow: unset;
+    }
+    .ant-btn,
+    .ant-input-group-addon {
+      border-top-right-radius: 12px !important;
+      border-bottom-right-radius: 12px !important;
+    }
+    border-radius: 12px;
+  }
+
+  .rightbar {
+    .ant-row {
+      gap: 0.5rem;
+      height: 100% !important;
+      .ant-col {
+        height: 100% !important;
+
+        .ant-btn {
+          background: var(--nav-bg);
+          border-radius: 10px;
+          font-size: 1.1rem;
+          height: 100%;
+          border: unset;
+          @include flexcenter();
+          gap: 0.5rem;
+          min-width: 100%;
+          color: var(--nav-icon-clr);
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .organge {
+    color: var(--txt-clr-orange);
+    font-weight: 500;
+  }
+
+  .dot {
+    font-size: 2rem;
+    z-index: 10;
+    position: absolute;
+    right: -13px;
+    top: -15px;
+  }
+}
+
+.adminNav_mobile {
+  background: var(--bg-side);
+  @include min-height();
+  margin-inline: 0px !important;
+  .ant-col:first-of-type {
+    align-items: center;
+    display: flex;
+  }
+  .avatar {
+    background-color: var(--txt-clr-orange);
+    margin-right: 10px;
+  }
+  .userName {
+    margin-right: 10px;
+    color: var(--side-active-tab-bg);
+    max-width: 122px;
+
+    > h5,
+    > span {
+      color: var(--side-active-tab-bg);
+      font-size: 14px;
+      margin-bottom: 0;
+      position: relative;
+      top: 6px;
+    }
+  }
+  .Icon:not(.dot) {
+    font-size: 1.05rem;
+    color: var(--side-active-tab-bg);
+    cursor: pointer;
+  }
+  .Icon.hamburger {
+    position: relative;
+    top: -3px;
+    font-size: 1.45rem;
+  }
+}
